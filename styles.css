@@ -1,0 +1,194 @@
+/* ---------- Colors (from the Figma design) ---------- */
+:root {
+  --page-purple: #eedcf8;   /* primary 1 */
+  --dark-brown: #38160d;    /* primary 2 */
+  --button-purple: #897dca; /* primary 4 */
+  --cream: #fefae0;         /* neutral 1 */
+  --nav-pink: #cca4c8;      /* neutral 2 */
+  --header-blue: #90b2c1;
+}
+
+/* ---------- Page ---------- */
+/* The Figma design was made at 2x, so every size here is half of what Figma shows. */
+
+body {
+  margin: 0;
+  background-color: var(--button-purple);
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* The phone-sized column in the middle */
+.page {
+  width: 100%;
+  max-width: 342px;
+  margin: 0 auto;
+  background-color: var(--page-purple);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  margin: 0;
+}
+
+.site-title {
+  margin: 0;
+  height: 114px;
+  box-sizing: border-box;
+  padding: 0 14px 12px 14px;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--header-blue);
+  background-image: url("images/page-header-background.png");
+  background-size: cover;
+  font-family: "Hobo Std", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--dark-brown);
+}
+
+/* ---------- Top navigation ---------- */
+
+.top-nav {
+  height: 48px;
+  padding: 0 17px 0 6px;
+  display: flex;
+  align-items: center;
+  background-color: var(--nav-pink);
+}
+
+.hamburger-button {
+  width: 34px;
+  height: 41px;
+  padding: 0;
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 3px;
+  background-color: var(--dark-brown);
+}
+
+.top-links {
+  flex: 1;
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-link {
+  width: 75px;
+  height: 35px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-purple);
+  font-family: "Antarctican Headline", sans-serif;
+  font-size: 23px;
+  text-decoration: none;
+  color: var(--cream);
+}
+
+/* ---------- Main content ---------- */
+
+.main-content {
+  padding: 12px 17px 40px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ---------- Intro ---------- */
+
+.intro {
+  padding-left: 16px;
+}
+
+.intro-heading {
+  margin: 0 0 12px 0;
+  font-family: "The Seasons", serif;
+  font-weight: 400;
+  font-size: 27px;
+  color: var(--dark-brown);
+}
+
+.intro-text {
+  margin: 0;
+  width: 273px;
+  text-indent: 14px;
+  font-family: "Antarctican Headline", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--dark-brown);
+}
+
+/* ---------- Animal pictures ---------- */
+
+.picture-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.animal-picture {
+  display: block;
+  width: 138px;
+  height: 138px;
+  object-fit: cover;
+}
+
+.animal-picture-short {
+  height: 93px;
+}
+
+/* ---------- Statistics ---------- */
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.statistic-picture {
+  display: block;
+  width: 100%;
+}
+
+/* ---------- Links to other pages ---------- */
+
+.home-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.home-link {
+  width: 240px;
+  height: 49px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-purple);
+  font-family: "The Seasons", serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--cream);
+}
