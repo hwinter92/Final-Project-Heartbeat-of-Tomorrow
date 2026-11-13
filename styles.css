@@ -1,194 +1,233 @@
-/* ---------- Colors (from the Figma design) ---------- */
+/* ---------- Colors (from your Figma file) ---------- */
 :root {
-  --page-purple: #eedcf8;   /* primary 1 */
-  --dark-brown: #38160d;    /* primary 2 */
-  --button-purple: #897dca; /* primary 4 */
-  --cream: #fefae0;         /* neutral 1 */
-  --nav-pink: #cca4c8;      /* neutral 2 */
+  --page-lavender: #eedcf8;
   --header-blue: #90b2c1;
+  --title-brown: #38160d;
+  --nav-bar: #cca4c8;
+  --nav-pill: #897dca;
+  --nav-pill-hover: #6f63b8;
+  --nav-pill-current: #6252a8;
+  --cream: #fefae0;
+  --panel-blue: #9dbac9;
+  --button-blue: #7a9fb0;
+  --button-blue-hover: #5f8799;
+  --black: #000000;
 }
 
-/* ---------- Page ---------- */
-/* The Figma design was made at 2x, so every size here is half of what Figma shows. */
+/* ---------- Page ----------
+   All sizes match the Figma frame exactly: 1440px wide. */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  margin: 0;
-  background-color: var(--button-purple);
-  background-image: url("images/background.png");
-  background-size: cover;
-  background-attachment: fixed;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100vh;
+  background-color: var(--page-lavender);
+  font-family: "antarctican-headline", sans-serif;
+  color: var(--title-brown);
 }
 
-/* The phone-sized column in the middle */
-.page {
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 342px;
-  margin: 0 auto;
-  background-color: var(--page-purple);
+  height: 100%;
+  background-image: url("images/home-page-background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Stays at 20% across every page */
+  z-index: -1;
 }
 
 /* ---------- Header ---------- */
-
 .site-header {
-  margin: 0;
+  position: relative;
+  height: 173px;
+  background-color: var(--header-blue);
+  overflow: hidden;
+  text-align: center;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
 }
 
 .site-title {
+  position: relative;
   margin: 0;
-  height: 114px;
-  box-sizing: border-box;
-  padding: 0 14px 12px 14px;
-  display: flex;
-  align-items: flex-end;
-  background-color: var(--header-blue);
-  background-image: url("images/page-header-background.png");
-  background-size: cover;
-  font-family: "Hobo Std", sans-serif;
+  line-height: 173px;
+  font-family: "hobo-std", sans-serif;
   font-weight: 500;
-  font-size: 30px;
-  color: var(--dark-brown);
+  font-size: 64px;
+  color: var(--title-brown);
 }
 
-/* ---------- Top navigation ---------- */
+/* ---------- Navigation ---------- */
+.main-nav {
+  height: 96px;
+  background-color: var(--nav-bar);
+  padding: 26px 64px 0 64px;
+  box-sizing: border-box;
+}
 
-.top-nav {
-  height: 48px;
-  padding: 0 17px 0 6px;
+.nav-list {
   display: flex;
-  align-items: center;
-  background-color: var(--nav-pink);
-}
-
-.hamburger-button {
-  width: 34px;
-  height: 41px;
-  padding: 0;
-  border: none;
-  background: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-.hamburger-line {
-  width: 22px;
-  height: 3px;
-  background-color: var(--dark-brown);
-}
-
-.top-links {
-  flex: 1;
-  margin: 0 0 0 20px;
+  gap: 15px;
+  margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: space-between;
 }
 
-.top-link {
-  width: 75px;
-  height: 35px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--button-purple);
-  font-family: "Antarctican Headline", sans-serif;
-  font-size: 23px;
-  text-decoration: none;
+.nav-link {
+  display: block;
+  width: 151px;
+  height: 43px;
+  background-color: var(--nav-pill);
+  border-radius: 16px;
   color: var(--cream);
+  font-size: 30px;
+  line-height: 43px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
 }
 
-/* ---------- Main content ---------- */
-
-.main-content {
-  padding: 12px 17px 40px 17px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
+.nav-link:hover {
+  background-color: var(--nav-pill-hover);
 }
+
+/*.nav-link-current {
+  background-color: var(--nav-pill-current);
+}*/
 
 /* ---------- Intro ---------- */
-
 .intro {
-  padding-left: 16px;
+  width: 876px;
+  margin: 46px auto 0 auto;
 }
 
 .intro-heading {
-  margin: 0 0 12px 0;
+  margin: 0 0 60px 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 27px;
-  color: var(--dark-brown);
+  font-size: 55px;
 }
 
 .intro-text {
   margin: 0;
-  width: 273px;
-  text-indent: 14px;
-  font-family: "Antarctican Headline", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: var(--dark-brown);
+  font-size: 28px;
 }
 
-/* ---------- Animal pictures ---------- */
+/* ---------- Animal panel ---------- */
+.animal-panel {
+  width: 1226px;
+  margin: 90px auto 0 auto;
+  padding: 20px 0;
+  background-color: var(--panel-blue);
+  border-radius: 20px;
+}
 
-.picture-grid {
+.animal-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.animal-picture {
-  display: block;
-  width: 138px;
-  height: 138px;
-  object-fit: cover;
-}
-
-.animal-picture-short {
-  height: 93px;
-}
-
-/* ---------- Statistics ---------- */
-
-.statistics {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.statistic-picture {
-  display: block;
-  width: 100%;
-}
-
-/* ---------- Links to other pages ---------- */
-
-.home-links {
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
 }
 
-.home-link {
-  width: 240px;
-  height: 49px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--button-purple);
-  font-family: "The Seasons", serif;
-  font-size: 18px;
+.animal-card {
+  width: 50%;
+  padding: 20px 0 60px 0;
+  text-align: center;
+}
+
+.animal-link {
+  display: block;
+  color: var(--black);
   text-decoration: none;
-  color: var(--cream);
+}
+
+.animal-still,
+.animal-gif {
+  width: 370px;
+}
+
+/* The gif stays hidden until the mouse is over the card */
+.animal-gif {
+  display: none;
+}
+
+.animal-card:hover .animal-still {
+  display: none;
+}
+
+.animal-card:hover .animal-gif {
+  display: inline;
+}
+
+.animal-name {
+  margin: 8px 0 0 0;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--black);
+}
+
+.animal-hint {
+  margin: 0;
+  font-size: 28px;
+  color: var(--black);
+}
+
+/* ---------- Statistics ---------- */
+.statistics {
+  width: 1226px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+.statistic-image {
+  display: block;
+  width: 100%;
+  margin-top: 90px;
+}
+
+/* ---------- Back to top button ---------- */
+.back-to-top {
+  position: fixed;
+  right: 100px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  background-color: var(--button-blue);
+  border-radius: 50%;
+  color: var(--black);
+  font-family: "hobo-std", sans-serif;
+  font-size: 100px;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.back-to-top:hover {
+  background-color: var(--button-blue-hover);
+  transform: translateY(-8px);
+}
+
+.back-to-top:active {
+  transform: scale(0.9);
 }
