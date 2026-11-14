@@ -1,0 +1,267 @@
+/* ---------- Colors (from your Figma file) ---------- */
+:root {
+  --page-lavender: #eedcf8;
+  --header-blue: #90b2c1;
+  --title-brown: #38160d;
+  --nav-bar: #cca4c8;
+  --nav-pill: #897dca;
+  --nav-pill-hover: #6f63b8;
+  --cream: #fefae0;
+  --button-blue: #9DBAC9;
+  --button-blue-hover: #628CA2;
+  --black: #000000;
+}
+
+/* ---------- Page ----------
+   All sizes match the Figma frame exactly: 1440px wide. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100vh;
+  background-color: var(--page-lavender);
+  font-family: "antarctican-headline", sans-serif;
+  color: var(--title-brown);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/page-background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Stays at 20% across every page */
+  z-index: -1;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: relative;
+  height: 173px;
+  background-color: var(--header-blue);
+  overflow: hidden;
+  text-align: center;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.site-title {
+  position: relative;
+  margin: 0;
+  line-height: 173px;
+  font-family: "hobo-std", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+}
+
+.site-title-link {
+  color: var(--title-brown);
+  text-decoration: none;
+}
+
+/* ---------- Navigation ---------- */
+.main-nav {
+  height: 96px;
+  background-color: var(--nav-bar);
+  padding: 26px 64px 0 64px;
+  box-sizing: border-box;
+}
+
+.nav-list {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  width: 151px;
+  height: 43px;
+  background-color: var(--nav-pill);
+  border-radius: 16px;
+  color: var(--cream);
+  font-size: 30px;
+  line-height: 43px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--nav-pill-hover);
+}
+
+/* ---------- Mockups heading ---------- */
+.mockups-intro {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.mockups-heading {
+  margin: 0 0 62px 0;
+  font-family: "The Seasons", serif;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.mockups-note {
+  width: 850px;
+  margin: 0 auto;
+  font-family: "Gotham", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+/* ---------- Sections (T-Shirts and Tote Bags) ---------- */
+.mockup-section {
+  text-align: center;
+}
+
+.shirts-section {
+  margin-top: 130px;
+}
+
+.totes-section {
+  margin-top: 148px;
+  padding-bottom: 200px;
+}
+
+.section-heading {
+  margin: 0 0 65px 0;
+  font-family: "The Seasons", serif;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+/* ---------- Mockup lists ----------
+   Two items on the first row, the third wraps and centers underneath. */
+.mockup-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.shirt-list {
+  width: 1240px;
+  column-gap: 127px;
+}
+
+.tote-list {
+  width: 1250px;
+  column-gap: 172px;
+}
+
+.mockup-item {
+  margin-bottom: 50px;
+}
+
+/* ---------- Mockup images ---------- */
+.rhino-shirt-image {
+  display: block;
+  height: 484px;
+  width: 569px;
+  object-fit: cover;
+}
+
+.whale-shirt-image {
+  display: block;
+  height: 484px;
+  width: 543px;
+  object-fit: cover;
+}
+
+.polar-bear-shirt-image {
+  display: block;
+  height: 484px;
+  width: 569px;
+  object-fit: cover;
+}
+
+.rhino-tote-image {
+  display: block;
+  height: 750px;
+  width: 514px;
+  object-fit: cover;
+}
+
+.whale-tote-image {
+  display: block;
+  height: 750px;
+  width: 564px;
+  object-fit: cover;
+}
+
+.polar-bear-tote-image {
+  display: block;
+  height: 750px;
+  width: 514px;
+  object-fit: cover;
+}
+
+/* ---------- Mockup names ---------- */
+.mockup-name {
+  width: 486px;
+  margin: 16px auto 0 auto;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 51px;
+  text-align: left;
+}
+
+.mockup-name-narrow {
+  width: 336px;
+}
+
+/* ---------- Back to top button ---------- */
+.back-to-top {
+  position: fixed;
+  right: 100px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  background-color: var(--button-blue);
+  border-radius: 50%;
+  color: var(--black);
+  font-family: "hobo-std", sans-serif;
+  font-size: 100px;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.back-to-top:hover {
+  background-color: var(--button-blue-hover);
+  transform: translateY(-8px);
+}
+
+.back-to-top:active {
+  transform: scale(0.9);
+}
