@@ -9,8 +9,8 @@
   --nav-pill-current: #6252a8;
   --cream: #fefae0;
   --panel-blue: #9dbac9;
-  --button-blue: #7a9fb0;
-  --button-blue-hover: #5f8799;
+  --button-blue: #9DBAC9;
+  --button-blue-hover: #628CA2;
   --black: #000000;
 }
 
@@ -37,7 +37,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/home-page-background.jpg");
+  background-image: url("images/page-background.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.2; /* Stays at 20% across every page */
