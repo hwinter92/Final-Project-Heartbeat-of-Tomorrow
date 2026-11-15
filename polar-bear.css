@@ -170,7 +170,21 @@ body::before {
 }
 
 /* ---------- Statistics ---------- */
-.statistics-image {
+/* The chart is a link to the website it came from.
+   The link is the same size as the chart so the shadow fits it. */
+.statistics-link {
+  display: block;
+  width: 880px;
+  height: 640px;
+  transition: box-shadow 0.2s;
+}
+
+/* Drop shadow appears when the mouse is over the chart */
+.statistics-link:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.statistics-chart {
   display: block;
   width: 880px;
   height: 640px;

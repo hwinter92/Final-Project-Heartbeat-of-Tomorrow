@@ -13,7 +13,8 @@
 }
 
 /* ---------- Page ----------
-   All sizes match the Figma frame exactly: 1440px wide. */
+   Sizes match the Figma frame (1440px wide).
+   The header and nav stretch across the whole browser window. */
 html {
   scroll-behavior: smooth;
 }
@@ -114,11 +115,14 @@ body::before {
 }
 
 /* ---------- Page content ----------
-   Everything under the nav sits in one column:
-   214px from the left edge, 1054px wide, like Figma. */
+   The content column is centered on the page. The 42px of
+   padding on the left puts the content 214px from the left
+   edge on a 1440px screen, like Figma. */
 .animal-page {
-  width: 1054px;
-  margin: 46px 0 0 214px;
+  width: 1096px;
+  box-sizing: border-box;
+  padding-left: 42px;
+  margin: 46px auto 0 auto;
 }
 
 /* Big page title: "The Northern White Rhino" */
@@ -180,11 +184,25 @@ body::before {
 }
 
 /* ---------- Statistics chart ---------- */
-.statistics-chart {
+/* The chart is a link to the website it came from.
+   The link is the same size as the chart so the shadow fits it. */
+.statistics-link {
   display: block;
   width: 737px;
   height: 640px;
   margin-bottom: 150px;
+  transition: box-shadow 0.2s;
+}
+
+/* Drop shadow appears when the mouse is over the chart */
+.statistics-link:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.statistics-chart {
+  display: block;
+  width: 737px;
+  height: 640px;
 }
 
 /* ---------- Back to top button ---------- */

@@ -181,7 +181,21 @@ body::before {
   line-height: 36px;
 }
 
-/* ---------- Whale page: statistics chart ---------- */
+/* ---------- Whale page: statistics chart ----------
+   The chart is a link to the NOAA Fisheries page it came from.
+   The link is the same size as the chart so the shadow fits it. */
+.statistics-link {
+  display: block;
+  width: 717px;
+  height: 640px;
+  transition: box-shadow 0.2s;
+}
+
+/* Drop shadow appears when the mouse is over the chart */
+.statistics-link:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .statistics-image {
   display: block;
   width: 717px;

@@ -1,0 +1,205 @@
+/* ---------- Colors (from your Figma file) ---------- */
+:root {
+  --page-lavender: #eedcf8;
+  --header-blue: #90b2c1;
+  --title-brown: #38160d;
+  --title-hover: #628CA2;
+  --nav-bar: #cca4c8;
+  --nav-pill: #897dca;
+  --nav-pill-hover: #6f63b8;
+  --cream: #fefae0;
+  --button-blue: #9DBAC9;
+  --button-blue-hover: #628CA2;
+  --black: #000000;
+}
+
+/* ---------- Page ----------
+   All sizes match the Figma frame exactly: 1440px wide. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100vh;
+  background-color: var(--page-lavender);
+  font-family: "antarctican-headline", sans-serif;
+  color: var(--title-brown);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/page-background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Stays at 20% across every page */
+  z-index: -1;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: relative;
+  height: 173px;
+  background-color: var(--header-blue);
+  overflow: hidden;
+  text-align: center;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.site-title {
+  position: relative;
+  margin: 0;
+  line-height: 173px;
+  font-family: "hobo-std", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+}
+
+/* The title is a link back to the home page */
+.site-title-link {
+  color: var(--title-brown);
+  text-decoration: none;
+}
+
+/* ---------- Navigation ---------- */
+.main-nav {
+  height: 96px;
+  background-color: var(--nav-bar);
+  padding: 26px 64px 0 64px;
+  box-sizing: border-box;
+}
+
+.nav-list {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  width: 151px;
+  height: 43px;
+  background-color: var(--nav-pill);
+  border-radius: 16px;
+  color: var(--cream);
+  font-size: 30px;
+  line-height: 43px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--nav-pill-hover);
+}
+
+/* ---------- Donate page ---------- */
+.donate {
+  padding-bottom: 120px;
+}
+
+.donate-heading {
+  margin: 46px 0 67px 0;
+  font-family: "The Seasons", serif;
+  font-weight: 400;
+  font-size: 55px;
+  text-align: center;
+}
+
+/* One program = logo, title, and description */
+.program {
+  width: 1026px;
+  margin: 0 auto 188px auto;
+}
+
+.program-link {
+  display: block;
+  width: 680px;
+  height: 586px;
+  margin: 0 auto;
+  transition: box-shadow 0.2s;
+}
+
+/* Drop shadow from your Figma hover state:
+   0 across, 4px down, 4px blur, black at 25% */
+.program-link:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.program-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.program-title {
+  margin: 58px 0 0 0;
+  font-family: "The Seasons", serif;
+  font-weight: 400;
+  font-size: 55px;
+}
+
+.program-title-link {
+  color: var(--title-brown);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.program-title-link:hover {
+  color: var(--title-hover);
+}
+
+.program-text {
+  width: 845px;
+  margin: 80px 0 0 91px;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+/* ---------- Back to top button ---------- */
+.back-to-top {
+  position: fixed;
+  right: 100px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  background-color: var(--button-blue);
+  border-radius: 50%;
+  color: var(--black);
+  font-family: "hobo-std", sans-serif;
+  font-size: 100px;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.back-to-top:hover {
+  background-color: var(--button-blue-hover);
+  transform: translateY(-8px);
+}
+
+.back-to-top:active {
+  transform: scale(0.9);
+}
