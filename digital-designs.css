@@ -21,7 +21,6 @@ html {
 body {
   position: relative;
   margin: 0 auto;
-  max-width: 1440px;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -134,7 +133,7 @@ body::before {
 }
 
 .design-image {
-  width: 771px;
+  width: 620px;
 }
 
 .design-description {
@@ -143,6 +142,39 @@ body::before {
   font-weight: 400;
   font-size: 28px;
   line-height: 100%;
+}
+
+/* ---------- Click-to-enlarge images ----------
+   The button wraps the small image. Clicking it opens the popup,
+   which the browser centers on the screen. Click outside the
+   image or press Esc to close it. */
+.image-button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.image-popup {
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: none;
+  background: none;
+  overflow: visible;
+}
+
+.image-popup::backdrop {
+  background-color: rgba(56, 22, 13, 0.7);
+}
+
+.popup-image {
+  display: block;
+  height: 85vh;
+  max-width: 90vw;
+  object-fit: contain;
 }
 
 /* ---------- Research link (heading + screenshot) ---------- */
@@ -200,13 +232,16 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 92px;
   height: 92px;
+  padding-top: 30px;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
   font-size: 100px;
+  line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
 }

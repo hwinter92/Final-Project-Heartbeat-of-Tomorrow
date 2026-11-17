@@ -21,7 +21,6 @@ html {
 body {
   position: relative;
   margin: 0 auto;
-  max-width: 1440px;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -224,6 +223,35 @@ body::before {
   object-fit: cover;
 }
 
+/* ---------- Click to enlarge ---------- */
+/* The button wraps each picture so it can be clicked.
+   It has no padding or border, so the picture stays the same size. */
+.mockup-button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* The bigger picture. It only shows while it is open, centered on the screen.
+   80% of the window height keeps it from being too big or too small. */
+.big-image:popover-open {
+  height: 80%;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Dims the page behind the bigger picture */
+.big-image::backdrop {
+  background-color: rgba(56, 22, 13, 0.6);
+}
+
 /* ---------- Mockup names ---------- */
 .mockup-name {
   width: 486px;
@@ -246,13 +274,16 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 92px;
   height: 92px;
+  padding-top: 30px;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
   font-size: 100px;
+  line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
 }

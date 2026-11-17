@@ -22,7 +22,6 @@ html {
 body {
   position: relative;
   margin: 0 auto;
-  max-width: 1440px;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -213,13 +212,16 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 92px;
   height: 92px;
+  padding-top: 30px;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
   font-size: 100px;
+  line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
 }

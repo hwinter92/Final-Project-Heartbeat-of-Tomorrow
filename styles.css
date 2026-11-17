@@ -23,7 +23,6 @@ html {
 body {
   position: relative;
   margin: 0 auto;
-  max-width: 1440px;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -160,22 +159,32 @@ body::before {
   text-decoration: none;
 }
 
-.animal-still,
-.animal-gif {
+/* The frame is the same size as the still image */
+.animal-frame {
+  position: relative;
   width: 370px;
+  margin: 0 auto;
 }
 
-/* The gif stays hidden until the mouse is over the card */
+.animal-still {
+  display: block;
+  width: 100%;
+}
+
+/* The gif sits on top of the still and fills the whole frame */
 .animal-gif {
-  display: none;
-}
-
-.animal-card:hover .animal-still {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .animal-card:hover .animal-gif {
-  display: inline;
+  opacity: 1;
 }
 
 .animal-name {
@@ -212,13 +221,16 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 92px;
   height: 92px;
+  padding-top: 30px;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
   font-size: 100px;
+  line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
 }
