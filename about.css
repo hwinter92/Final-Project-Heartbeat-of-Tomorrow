@@ -14,14 +14,18 @@
   --sources-hover: #628CA2;
 }
 
-/* ---------- Page (Figma frame is 1440px wide) ---------- */
+/* ---------- Page ----------
+   Every size is the Figma pixel number divided by 14.4,
+   written in vw (1vw = 1% of the window width).
+   So the page matches the 1440px Figma frame at any window size,
+   exactly like the home page. */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -46,7 +50,7 @@ body::before {
 /* ---------- Header ---------- */
 .site-header {
   position: relative;
-  height: 173px;
+  height: 12vw;
   background-color: var(--header-blue);
   overflow: hidden;
   text-align: center;
@@ -65,10 +69,11 @@ body::before {
 .site-title {
   position: relative;
   margin: 0;
-  line-height: 173px;
+  line-height: 12vw;
   font-family: "hobo-std", sans-serif;
   font-weight: 500;
-  font-size: 64px;
+  font-size: 4.44vw;
+  color: var(--title-brown);
 }
 
 .site-title-link {
@@ -78,15 +83,15 @@ body::before {
 
 /* ---------- Navigation ---------- */
 .main-nav {
-  height: 96px;
+  height: 6.67vw;
   background-color: var(--nav-bar);
-  padding: 26px 64px 0 64px;
+  padding: 1.81vw 4.44vw 0 4.44vw;
   box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
-  gap: 15px;
+  gap: 1.04vw;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -94,13 +99,13 @@ body::before {
 
 .nav-link {
   display: block;
-  width: 151px;
-  height: 43px;
+  width: 10.49vw;
+  height: 3vw;
   background-color: var(--nav-pill);
-  border-radius: 16px;
+  border-radius: 1.11vw;
   color: var(--cream);
-  font-size: 30px;
-  line-height: 43px;
+  font-size: 2.08vw;
+  line-height: 3vw;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -113,56 +118,56 @@ body::before {
 
 /* ---------- About the Designer ---------- */
 .about-designer {
-  width: 1054px;
-  margin: 46px auto 0 auto;
+  width: 73.19vw;
+  margin: 3.19vw auto 0 auto;
   text-align: center;
 }
 
 .about-designer-heading {
-  margin: 0 0 62px 0;
+  margin: 0 0 4.31vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 3.82vw;
 }
 
 .about-image {
   display: block;
-  width: 431px;
-  height: 411px;
-  margin: 0 auto 35px auto;
+  width: 29.93vw;
+  height: 28.54vw;
+  margin: 0 auto 2.43vw auto;
   object-fit: cover;
 }
 
 /* ---------- Other sections ---------- */
 .about-section {
-  width: 1054px;
-  margin: 82px auto 0 auto;
+  width: 73.19vw;
+  margin: 5.69vw auto 0 auto;
 }
 
 .about-heading {
-  margin: 0 0 80px 0;
+  margin: 0 0 5.56vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 3.82vw;
 }
 
 .about-text {
-  width: 874px;
-  margin: 0 0 0 90px;
-  font-size: 28px;
-  line-height: 28px;
+  width: 60.69vw;
+  margin: 0 0 0 6.25vw;
+  font-size: 1.94vw;
+  line-height: 1.94vw;
   text-align: left;
 }
 
 /* ---------- Contact ---------- */
 .contact-info {
-  margin: 0 0 0 90px;
+  margin: 0 0 0 6.25vw;
   font-style: normal;
 }
 
 .contact-line {
-  margin: 0 0 28px 0;
-  font-size: 28px;
+  margin: 0 0 1.94vw 0;
+  font-size: 1.94vw;
 }
 
 /* (possibly) .contact-line:hover {
@@ -171,27 +176,27 @@ body::before {
 
 /* ---------- Sources ---------- */
 .about-sources {
-  padding-bottom: 300px;
+  padding-bottom: 20.83vw;
 }
 
 .sources-columns {
   display: flex;
-  gap: 50px;
-  margin-left: 90px;
+  gap: 3.47vw;
+  margin-left: 6.25vw;
 }
 
 .sources-column {
-  width: 484px;
+  width: 33.61vw;
 }
 
 .source-group {
-  margin-bottom: 28px;
+  margin-bottom: 1.94vw;
 }
 
 .source-title {
   margin: 0;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 1.94vw;
 }
 
 .source-list {
@@ -202,7 +207,7 @@ body::before {
 
 .source-link {
   color: var(--title-brown);
-  font-size: 28px;
+  font-size: 1.94vw;
   text-decoration: underline;
 }
 
@@ -213,20 +218,20 @@ body::before {
 /* ---------- Back to top button ---------- */
 .back-to-top {
   position: fixed;
-  right: 100px;
-  bottom: 40px;
+  right: 6.94vw;
+  bottom: 2.78vw;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 92px;
-  height: 92px;
-  padding-top: 30px;
+  width: 6.39vw;
+  height: 6.39vw;
+  padding-top: 2.08vw;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
-  font-size: 100px;
+  font-size: 6.94vw;
   line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
@@ -234,7 +239,7 @@ body::before {
 
 .back-to-top:hover {
   background-color: var(--button-blue-hover);
-  transform: translateY(-8px);
+  transform: translateY(-0.56vw);
 }
 
 .back-to-top:active {

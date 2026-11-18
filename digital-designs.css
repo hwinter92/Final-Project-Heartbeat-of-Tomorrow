@@ -13,14 +13,16 @@
 }
 
 /* ---------- Page ----------
-   All sizes match the Figma frame exactly: 1440px wide. */
+   Every size is the Figma pixel number divided by 14.4,
+   written in vw (1vw = 1% of the window width).
+   So the page matches the 1440px Figma frame at any window size. */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -44,7 +46,7 @@ body::before {
 /* ---------- Header ---------- */
 .site-header {
   position: relative;
-  height: 173px;
+  height: 12vw;
   background-color: var(--header-blue);
   overflow: hidden;
   text-align: center;
@@ -63,10 +65,10 @@ body::before {
 .site-title {
   position: relative;
   margin: 0;
-  line-height: 173px;
+  line-height: 12vw;
   font-family: "hobo-std", sans-serif;
   font-weight: 500;
-  font-size: 64px;
+  font-size: 4.44vw;
 }
 
 .site-title-link {
@@ -76,15 +78,15 @@ body::before {
 
 /* ---------- Navigation ---------- */
 .main-nav {
-  height: 96px;
+  height: 6.67vw;
   background-color: var(--nav-bar);
-  padding: 26px 64px 0 64px;
+  padding: 1.81vw 4.44vw 0 4.44vw;
   box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
-  gap: 15px;
+  gap: 1.04vw;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -92,13 +94,13 @@ body::before {
 
 .nav-link {
   display: block;
-  width: 151px;
-  height: 43px;
+  width: 10.49vw;
+  height: 3vw;
   background-color: var(--nav-pill);
-  border-radius: 16px;
+  border-radius: 1.11vw;
   color: var(--cream);
-  font-size: 30px;
-  line-height: 43px;
+  font-size: 2.08vw;
+  line-height: 3vw;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -111,14 +113,14 @@ body::before {
 
 /* ---------- Digital Designs page ---------- */
 .designs-page {
-  padding-bottom: 436px;
+  padding-bottom: 30.28vw;
 }
 
 .page-heading {
-  margin: 46px 0 102px 0;
+  margin: 3.19vw 0 7.08vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 3.82vw;
   line-height: 100%;
   text-align: center;
 }
@@ -129,18 +131,18 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 274px;
+  margin-bottom: 19.03vw;
 }
 
 .design-image {
-  width: 620px;
+  width: 43.06vw;
 }
 
 .design-description {
-  width: 879px;
-  margin: 75px 0 0 0;
+  width: 61.04vw;
+  margin: 5.21vw 0 0 0;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.94vw;
   line-height: 100%;
 }
 
@@ -180,7 +182,7 @@ body::before {
 /* ---------- Research link (heading + screenshot) ---------- */
 .research-link {
   display: block;
-  margin-top: 109px;
+  margin-top: 7.57vw;
   color: var(--title-brown);
   text-decoration: none;
 }
@@ -189,20 +191,20 @@ body::before {
   margin: 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 3.82vw;
   line-height: 100%;
   text-align: center;
 }
 
 .research-image {
   display: block;
-  width: 879px;
-  margin: 82px auto 0 auto;
+  width: 61.04vw;
+  margin: 5.69vw auto 0 auto;
 }
 
 /* The polar bear screenshot is taller and narrower */
 .research-image-narrow {
-  width: 635px;
+  width: 44.1vw;
 }
 
 /* ---------- Mood board ---------- */
@@ -213,34 +215,34 @@ body::before {
 }
 
 .mood-board-heading {
-  margin: 0 0 125px 0;
+  margin: 0 0 8.68vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 3.82vw;
   line-height: 100%;
 }
 
 .mood-board-image {
-  width: 635px;
+  width: 44.1vw;
 }
 
 /* ---------- Back to top button ---------- */
 .back-to-top {
   position: fixed;
-  right: 100px;
-  bottom: 40px;
+  right: 6.94vw;
+  bottom: 2.78vw;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 92px;
-  height: 92px;
-  padding-top: 30px;
+  width: 6.39vw;
+  height: 6.39vw;
+  padding-top: 2.08vw;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
-  font-size: 100px;
+  font-size: 6.94vw;
   line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
@@ -248,7 +250,7 @@ body::before {
 
 .back-to-top:hover {
   background-color: var(--button-blue-hover);
-  transform: translateY(-8px);
+  transform: translateY(-0.56vw);
 }
 
 .back-to-top:active {

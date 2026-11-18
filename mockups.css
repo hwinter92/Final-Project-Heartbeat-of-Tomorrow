@@ -13,14 +13,16 @@
 }
 
 /* ---------- Page ----------
-   All sizes match the Figma frame exactly: 1440px wide. */
+   Every size is the Figma pixel number divided by 14.4,
+   written in vw (1vw = 1% of the window width).
+   So the page matches the 1440px Figma frame at any window size. */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -44,7 +46,7 @@ body::before {
 /* ---------- Header ---------- */
 .site-header {
   position: relative;
-  height: 173px;
+  height: 12vw;
   background-color: var(--header-blue);
   overflow: hidden;
   text-align: center;
@@ -63,10 +65,10 @@ body::before {
 .site-title {
   position: relative;
   margin: 0;
-  line-height: 173px;
+  line-height: 12vw;
   font-family: "hobo-std", sans-serif;
   font-weight: 500;
-  font-size: 64px;
+  font-size: 4.44vw;
 }
 
 .site-title-link {
@@ -76,15 +78,15 @@ body::before {
 
 /* ---------- Navigation ---------- */
 .main-nav {
-  height: 96px;
+  height: 6.67vw;
   background-color: var(--nav-bar);
-  padding: 26px 64px 0 64px;
+  padding: 1.81vw 4.44vw 0 4.44vw;
   box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
-  gap: 15px;
+  gap: 1.04vw;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -92,13 +94,13 @@ body::before {
 
 .nav-link {
   display: block;
-  width: 151px;
-  height: 43px;
+  width: 10.49vw;
+  height: 3vw;
   background-color: var(--nav-pill);
-  border-radius: 16px;
+  border-radius: 1.11vw;
   color: var(--cream);
-  font-size: 30px;
-  line-height: 43px;
+  font-size: 2.08vw;
+  line-height: 3vw;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -111,25 +113,25 @@ body::before {
 
 /* ---------- Mockups heading ---------- */
 .mockups-intro {
-  margin-top: 40px;
+  margin-top: 2.78vw;
   text-align: center;
 }
 
 .mockups-heading {
-  margin: 0 0 62px 0;
+  margin: 0 0 4.31vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 3.82vw;
+  line-height: 3.82vw;
 }
 
 .mockups-note {
-  width: 850px;
+  width: 59.03vw;
   margin: 0 auto;
   font-family: "Gotham", sans-serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 1.53vw;
 }
 
 /* ---------- Sections (T-Shirts and Tote Bags) ---------- */
@@ -138,20 +140,20 @@ body::before {
 }
 
 .shirts-section {
-  margin-top: 130px;
+  margin-top: 9.03vw;
 }
 
 .totes-section {
-  margin-top: 148px;
-  padding-bottom: 200px;
+  margin-top: 10.28vw;
+  padding-bottom: 13.89vw;
 }
 
 .section-heading {
-  margin: 0 0 65px 0;
+  margin: 0 0 4.51vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 3.82vw;
+  line-height: 3.82vw;
 }
 
 /* ---------- Mockup lists ----------
@@ -167,59 +169,59 @@ body::before {
 }
 
 .shirt-list {
-  width: 1240px;
-  column-gap: 127px;
+  width: 86.2vw;
+  column-gap: 8.82vw;
 }
 
 .tote-list {
-  width: 1250px;
-  column-gap: 172px;
+  width: 87vw;
+  column-gap: 11.94vw;
 }
 
 .mockup-item {
-  margin-bottom: 50px;
+  margin-bottom: 3.47vw;
 }
 
 /* ---------- Mockup images ---------- */
 .rhino-shirt-image {
   display: block;
-  height: 484px;
-  width: 569px;
+  height: 33.61vw;
+  width: 39.51vw;
   object-fit: cover;
 }
 
 .whale-shirt-image {
   display: block;
-  height: 484px;
-  width: 543px;
+  height: 33.61vw;
+  width: 37.71vw;
   object-fit: cover;
 }
 
 .polar-bear-shirt-image {
   display: block;
-  height: 484px;
-  width: 569px;
+  height: 33.61vw;
+  width: 39.51vw;
   object-fit: cover;
 }
 
 .rhino-tote-image {
   display: block;
-  height: 750px;
-  width: 514px;
+  height: 52.08vw;
+  width: 35.69vw;
   object-fit: cover;
 }
 
 .whale-tote-image {
   display: block;
-  height: 750px;
-  width: 564px;
+  height: 52.08vw;
+  width: 39.17vw;
   object-fit: cover;
 }
 
 .polar-bear-tote-image {
   display: block;
-  height: 750px;
-  width: 514px;
+  height: 52.08vw;
+  width: 35.69vw;
   object-fit: cover;
 }
 
@@ -254,35 +256,35 @@ body::before {
 
 /* ---------- Mockup names ---------- */
 .mockup-name {
-  width: 486px;
-  margin: 16px auto 0 auto;
+  width: 33.75vw;
+  margin: 1.11vw auto 0 auto;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 51px;
+  font-size: 2.78vw;
+  line-height: 3.54vw;
   text-align: left;
 }
 
 .mockup-name-narrow {
-  width: 336px;
+  width: 23.33vw;
 }
 
 /* ---------- Back to top button ---------- */
 .back-to-top {
   position: fixed;
-  right: 100px;
-  bottom: 40px;
+  right: 6.94vw;
+  bottom: 2.78vw;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 92px;
-  height: 92px;
-  padding-top: 30px;
+  width: 6.39vw;
+  height: 6.39vw;
+  padding-top: 2.08vw;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
-  font-size: 100px;
+  font-size: 6.94vw;
   line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
@@ -290,7 +292,7 @@ body::before {
 
 .back-to-top:hover {
   background-color: var(--button-blue-hover);
-  transform: translateY(-8px);
+  transform: translateY(-0.56vw);
 }
 
 .back-to-top:active {

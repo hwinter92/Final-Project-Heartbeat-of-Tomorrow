@@ -13,14 +13,16 @@
 }
 
 /* ---------- Page ----------
-   All sizes match the Figma frame exactly: 1440px wide. */
+   Every size is the Figma pixel number divided by 14.4,
+   written in vw (1vw = 1% of the window width).
+   So the page matches the 1440px Figma frame at any window size. */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -44,7 +46,7 @@ body::before {
 /* ---------- Header ---------- */
 .site-header {
   position: relative;
-  height: 173px;
+  height: 12vw;
   background-color: var(--header-blue);
   overflow: hidden;
   text-align: center;
@@ -63,10 +65,10 @@ body::before {
 .site-title {
   position: relative;
   margin: 0;
-  line-height: 173px;
+  line-height: 12vw;
   font-family: "hobo-std", sans-serif;
   font-weight: 500;
-  font-size: 64px;
+  font-size: 4.44vw;
   color: var(--title-brown);
 }
 
@@ -78,15 +80,15 @@ body::before {
 
 /* ---------- Navigation ---------- */
 .main-nav {
-  height: 96px;
+  height: 6.67vw;
   background-color: var(--nav-bar);
-  padding: 26px 64px 0 64px;
+  padding: 1.81vw 4.44vw 0 4.44vw;
   box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
-  gap: 15px;
+  gap: 1.04vw;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -94,13 +96,13 @@ body::before {
 
 .nav-link {
   display: block;
-  width: 151px;
-  height: 43px;
+  width: 10.49vw;
+  height: 3vw;
   background-color: var(--nav-pill);
-  border-radius: 16px;
+  border-radius: 1.11vw;
   color: var(--cream);
-  font-size: 30px;
-  line-height: 43px;
+  font-size: 2.08vw;
+  line-height: 3vw;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -112,60 +114,61 @@ body::before {
 }
 
 /* ---------- Page content ----------
-   1012px wide, centered, so it starts 214px from the left like Figma */
+   70.28vw wide and centered, so it starts 214px from the left
+   in the 1440px Figma frame */
 .page-content {
-  width: 1012px;
-  margin: 46px auto 0 auto;
-  padding-bottom: 120px;
+  width: 70.28vw;
+  margin: 3.19vw auto 0 auto;
+  padding-bottom: 8.33vw;
 }
 
 /* ---------- Title and photos ---------- */
 .page-title {
-  margin: 0 0 62px 0;
+  margin: 0 0 4.31vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 3.82vw;
+  line-height: 3.82vw;
   text-align: center;
 }
 
 .photo-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 37px;
+  margin-bottom: 2.57vw;
 }
 
 .photo {
-  height: 348px;
+  height: 24.17vw;
   object-fit: cover;
 }
 
 .photo-large {
-  width: 517px;
+  width: 35.9vw;
 }
 
 .photo-small {
-  width: 458px;
+  width: 31.81vw;
 }
 
 /* ---------- Text sections ---------- */
 .info-section {
-  margin-top: 88px;
+  margin-top: 6.11vw;
 }
 
 .section-heading {
-  margin: 0 0 70px 0;
+  margin: 0 0 4.86vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 3.82vw;
+  line-height: 3.82vw;
 }
 
-/* Paragraphs are indented 90px from the headings */
+/* Paragraphs are indented from the headings */
 .section-text {
-  width: 876px;
-  margin: 0 0 0 90px;
-  font-size: 28px;
+  width: 60.83vw;
+  margin: 0 0 0 6.25vw;
+  font-size: 1.94vw;
 }
 
 /* ---------- Statistics ---------- */
@@ -173,40 +176,40 @@ body::before {
    The link is the same size as the chart so the shadow fits it. */
 .statistics-link {
   display: block;
-  width: 880px;
-  height: 640px;
+  width: 61.11vw;
+  height: 44.44vw;
   transition: box-shadow 0.2s;
 }
 
 /* Drop shadow appears when the mouse is over the chart */
 .statistics-link:hover {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.28vw 0.28vw rgba(0, 0, 0, 0.25);
 }
 
 .statistics-chart {
   display: block;
-  width: 880px;
-  height: 640px;
+  width: 61.11vw;
+  height: 44.44vw;
   object-fit: cover;
 }
 
 /* ---------- Back to top button ---------- */
 .back-to-top {
   position: fixed;
-  right: 100px;
-  bottom: 40px;
+  right: 6.94vw;
+  bottom: 2.78vw;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 92px;
-  height: 92px;
-  padding-top: 30px;
+  width: 6.39vw;
+  height: 6.39vw;
+  padding-top: 2.08vw;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
-  font-size: 100px;
+  font-size: 6.94vw;
   line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
@@ -214,7 +217,7 @@ body::before {
 
 .back-to-top:hover {
   background-color: var(--button-blue-hover);
-  transform: translateY(-8px);
+  transform: translateY(-0.56vw);
 }
 
 .back-to-top:active {

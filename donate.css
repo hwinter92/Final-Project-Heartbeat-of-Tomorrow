@@ -14,14 +14,16 @@
 }
 
 /* ---------- Page ----------
-   All sizes match the Figma frame exactly: 1440px wide. */
+   Every size is the Figma pixel number divided by 14.4,
+   written in vw (1vw = 1% of the window width).
+   So the page matches the 1440px Figma frame at any window size. */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -45,7 +47,7 @@ body::before {
 /* ---------- Header ---------- */
 .site-header {
   position: relative;
-  height: 173px;
+  height: 12vw;
   background-color: var(--header-blue);
   overflow: hidden;
   text-align: center;
@@ -64,10 +66,10 @@ body::before {
 .site-title {
   position: relative;
   margin: 0;
-  line-height: 173px;
+  line-height: 12vw;
   font-family: "hobo-std", sans-serif;
   font-weight: 500;
-  font-size: 64px;
+  font-size: 4.44vw;
 }
 
 /* The title is a link back to the home page */
@@ -78,15 +80,15 @@ body::before {
 
 /* ---------- Navigation ---------- */
 .main-nav {
-  height: 96px;
+  height: 6.67vw;
   background-color: var(--nav-bar);
-  padding: 26px 64px 0 64px;
+  padding: 1.81vw 4.44vw 0 4.44vw;
   box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
-  gap: 15px;
+  gap: 1.04vw;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -94,13 +96,13 @@ body::before {
 
 .nav-link {
   display: block;
-  width: 151px;
-  height: 43px;
+  width: 10.49vw;
+  height: 3vw;
   background-color: var(--nav-pill);
-  border-radius: 16px;
+  border-radius: 1.11vw;
   color: var(--cream);
-  font-size: 30px;
-  line-height: 43px;
+  font-size: 2.08vw;
+  line-height: 3vw;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -113,27 +115,27 @@ body::before {
 
 /* ---------- Donate page ---------- */
 .donate {
-  padding-bottom: 120px;
+  padding-bottom: 8.33vw;
 }
 
 .donate-heading {
-  margin: 46px 0 67px 0;
+  margin: 3.19vw 0 4.65vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 3.82vw;
   text-align: center;
 }
 
 /* One program = logo, title, and description */
 .program {
-  width: 1026px;
-  margin: 0 auto 188px auto;
+  width: 71.25vw;
+  margin: 0 auto 13.06vw auto;
 }
 
 .program-link {
   display: block;
-  width: 680px;
-  height: 586px;
+  width: 47.22vw;
+  height: 40.69vw;
   margin: 0 auto;
   transition: box-shadow 0.2s;
 }
@@ -141,7 +143,7 @@ body::before {
 /* Drop shadow from your Figma hover state:
    0 across, 4px down, 4px blur, black at 25% */
 .program-link:hover {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.28vw 0.28vw rgba(0, 0, 0, 0.25);
 }
 
 .program-image {
@@ -152,10 +154,10 @@ body::before {
 }
 
 .program-title {
-  margin: 58px 0 0 0;
+  margin: 4.03vw 0 0 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 3.82vw;
 }
 
 .program-title-link {
@@ -169,29 +171,29 @@ body::before {
 }
 
 .program-text {
-  width: 845px;
-  margin: 80px 0 0 91px;
+  width: 58.68vw;
+  margin: 5.56vw 0 0 6.32vw;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.94vw;
 }
 
 /* ---------- Back to top button ---------- */
 .back-to-top {
   position: fixed;
-  right: 100px;
-  bottom: 40px;
+  right: 6.94vw;
+  bottom: 2.78vw;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 92px;
-  height: 92px;
-  padding-top: 30px;
+  width: 6.39vw;
+  height: 6.39vw;
+  padding-top: 2.08vw;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
-  font-size: 100px;
+  font-size: 6.94vw;
   line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
@@ -199,7 +201,7 @@ body::before {
 
 .back-to-top:hover {
   background-color: var(--button-blue-hover);
-  transform: translateY(-8px);
+  transform: translateY(-0.56vw);
 }
 
 .back-to-top:active {

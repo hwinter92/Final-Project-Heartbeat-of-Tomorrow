@@ -13,14 +13,16 @@
 }
 
 /* ---------- Page ----------
-   All sizes match the Figma frame exactly: 1440px wide. */
+   Every size is the Figma pixel number divided by 14.4,
+   written in vw (1vw = 1% of the window width).
+   So the page matches the 1440px Figma frame at any window size. */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100vh;
   background-color: var(--page-lavender);
   font-family: "antarctican-headline", sans-serif;
@@ -44,7 +46,7 @@ body::before {
 /* ---------- Header ---------- */
 .site-header {
   position: relative;
-  height: 173px;
+  height: 12vw;
   background-color: var(--header-blue);
   overflow: hidden;
   text-align: center;
@@ -63,10 +65,10 @@ body::before {
 .site-title {
   position: relative;
   margin: 0;
-  line-height: 173px;
+  line-height: 12vw;
   font-family: "hobo-std", sans-serif;
   font-weight: 500;
-  font-size: 64px;
+  font-size: 4.44vw;
   color: var(--title-brown);
 }
 
@@ -78,15 +80,15 @@ body::before {
 
 /* ---------- Navigation ---------- */
 .main-nav {
-  height: 96px;
+  height: 6.67vw;
   background-color: var(--nav-bar);
-  padding: 26px 64px 0 64px;
+  padding: 1.81vw 4.44vw 0 4.44vw;
   box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
-  gap: 15px;
+  gap: 1.04vw;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -94,13 +96,13 @@ body::before {
 
 .nav-link {
   display: block;
-  width: 151px;
-  height: 43px;
+  width: 10.49vw;
+  height: 3vw;
   background-color: var(--nav-pill);
-  border-radius: 16px;
+  border-radius: 1.11vw;
   color: var(--cream);
-  font-size: 30px;
-  line-height: 43px;
+  font-size: 2.08vw;
+  line-height: 3vw;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -113,17 +115,17 @@ body::before {
 
 /* ---------- Whale page: article column ---------- */
 .whale-article {
-  width: 1017px;
+  width: 70.7vw;
   margin: 0 auto;
-  padding-bottom: 173px;
+  padding-bottom: 12.01vw;
 }
 
 .page-title {
-  margin: 46px 0 62px 0;
+  margin: 3.19vw 0 4.31vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 3.82vw;
+  line-height: 3.82vw;
   text-align: center;
 }
 
@@ -131,53 +133,53 @@ body::before {
 .whale-photos {
   display: flex;
   flex-wrap: wrap;
-  gap: 37px 32px;
-  margin: 0 0 84px 0;
+  gap: 2.57vw 2.22vw;
+  margin: 0 0 5.83vw 0;
   padding: 0;
   list-style: none;
 }
 
 .whale-photo {
   display: block;
-  height: 348px;
+  height: 24.17vw;
   object-fit: cover;
 }
 
 .whale-photo-1 {
-  width: 517px;
+  width: 35.9vw;
 }
 
 .whale-photo-2 {
-  width: 453px;
+  width: 31.46vw;
 }
 
 .whale-photo-3 {
-  width: 520px;
+  width: 36.11vw;
 }
 
 .whale-photo-4 {
-  width: 465px;
+  width: 32.29vw;
 }
 
 /* ---------- Whale page: text sections ---------- */
 .whale-section {
-  margin-bottom: 84px;
+  margin-bottom: 5.83vw;
 }
 
 .section-heading {
-  margin: 0 0 70px 0;
+  margin: 0 0 4.86vw 0;
   font-family: "The Seasons", serif;
   font-weight: 400;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 3.82vw;
+  line-height: 3.82vw;
 }
 
 .section-text {
-  width: 867px;
-  margin: 0 0 0 90px;
+  width: 60.21vw;
+  margin: 0 0 0 6.25vw;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 1.94vw;
+  line-height: 2.5vw;
 }
 
 /* ---------- Whale page: statistics chart ----------
@@ -185,39 +187,39 @@ body::before {
    The link is the same size as the chart so the shadow fits it. */
 .statistics-link {
   display: block;
-  width: 717px;
-  height: 640px;
+  width: 49.79vw;
+  height: 44.44vw;
   transition: box-shadow 0.2s;
 }
 
 /* Drop shadow appears when the mouse is over the chart */
 .statistics-link:hover {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.28vw 0.28vw rgba(0, 0, 0, 0.25);
 }
 
 .statistics-image {
   display: block;
-  width: 717px;
-  height: 640px;
+  width: 100%;
+  height: 100%;
 }
 
 /* ---------- Back to top button ---------- */
 .back-to-top {
   position: fixed;
-  right: 100px;
-  bottom: 40px;
+  right: 6.94vw;
+  bottom: 2.78vw;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 92px;
-  height: 92px;
-  padding-top: 30px;
+  width: 6.39vw;
+  height: 6.39vw;
+  padding-top: 2.08vw;
   background-color: var(--button-blue);
   border-radius: 50%;
   color: var(--black);
   font-family: "hobo-std", sans-serif;
-  font-size: 100px;
+  font-size: 6.94vw;
   line-height: 1;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
@@ -225,7 +227,7 @@ body::before {
 
 .back-to-top:hover {
   background-color: var(--button-blue-hover);
-  transform: translateY(-8px);
+  transform: translateY(-0.56vw);
 }
 
 .back-to-top:active {
